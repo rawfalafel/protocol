@@ -78,7 +78,7 @@ async function getBarchartPrice(asset) {
 
 // Gets the Coinbase price for an asset or throws.
 async function getCoinbasePrice(asset) {
-  const url = `https://api.coinbase.com/v2/prices/${asset}-USD/spot`;
+  const url = `https://api.coinbase.com/v2/prices/${asset}/spot`;
   console.log(util.format("Querying Coinbase with [%s]", url));
   const jsonOutput = await getJson(url);
   console.log(util.format("Coinbase response [%s]", JSON.stringify(jsonOutput)));
